@@ -3,9 +3,10 @@ import Button from '../Button/Button';
 import OptionColor from '../OptionColor/OptionColor';
 import OptionSize from '../OptionSize/OptionSize';
 import PropTypes from 'prop-types';
+import { useMemo } from 'react';
 
 const ProductForm = props => {
-    const getPrice = () => props.basePrice + props.currentSize.additionalPrice;
+    const price = useMemo(() => props.basePrice + props.currentSize.additionalPrice, [props.currentSize, props.basePrice])
 
     return (
         <form>
@@ -15,7 +16,7 @@ const ProductForm = props => {
                 event.preventDefault();
                 const product =
                     `Name: ${props.name}\n` +
-                    `Price: ${getPrice()}$\n` +
+                    `Price: ${price}$\n` +
                     `Size: ${props.currentSize.name}\n` +
                     `Color: ${props.currentColor}\n`;
                 const summary = "SUMMARY\n======\n" + product
