@@ -36,7 +36,9 @@ const Product = props => {
 Product.propTypes = {
   name: PropTypes.string.isRequired,
   basePrice: PropTypes.number.isRequired,
-  description: PropTypes.string,
+  title: PropTypes.string.isRequired,
+  sizes: PropTypes.array.isRequired,
+  colors: PropTypes.array.isRequired
 };
 
 export default Product;
