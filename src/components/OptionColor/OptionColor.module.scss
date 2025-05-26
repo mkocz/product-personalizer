@@ -33,23 +33,23 @@
     }
 
     &.colorBlack {
-      background: #000;
+      background: $color-black;
     }
 
     &.colorRed {
-      background: #e74c3c;
+      background: $color-red;
     }
 
     &.colorWhite {
-      background: #fff;
+      background: $color-light;
     }
 
     &.colorBlue {
-      background: #3498db;
+      background: $color-blue;
     }
 
     &.colorGreen {
-      background: #2ecc71;
+      background: $color-green;
     }
 
     &:first-child {
